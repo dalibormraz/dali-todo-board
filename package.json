@@ -1,0 +1,30 @@
+{
+  "name": "todo-board",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TODO BOARD — osobní vizuální nástěnka úkolů (zaheslovaná, jen pro jednoho uživatele).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "hash": "node scripts/hash-password.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
+    "@xyflow/react": "^12.11.0",
+    "bcryptjs": "^3.0.2",
+    "iron-session": "^8.0.4",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "sharp": "^0.35.1",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.6.0"
+  }
+}

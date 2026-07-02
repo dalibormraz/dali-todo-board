@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif">
+  <defs>
+    <filter id="s3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1f2430" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="880" height="380" fill="#f4f5f7"/>
+  <text x="32" y="40" font-size="18" font-weight="800" fill="#1f2430">Datový model</text>
+
+  <!-- boards -->
+  <rect x="32" y="70" width="220" height="150" rx="12" fill="#fff" stroke="#e3e5ea" filter="url(#s3)"/>
+  <rect x="32" y="70" width="220" height="34" rx="12" fill="#6b4eff" opacity="0.12"/>
+  <text x="48" y="92" font-size="14" font-weight="800" fill="#5a3ff0">boards</text>
+  <text x="48" y="126" font-size="12.5" fill="#1f2430">id · uuid (PK)</text>
+  <text x="48" y="148" font-size="12.5" fill="#1f2430">key · text  → 'main'</text>
+  <text x="48" y="170" font-size="12.5" fill="#1f2430">title · text</text>
+  <text x="48" y="192" font-size="12.5" fill="#5b6473">jedna nástěnka</text>
+
+  <!-- zones -->
+  <rect x="330" y="40" width="230" height="180" rx="12" fill="#fff" stroke="#e3e5ea" filter="url(#s3)"/>
+  <rect x="330" y="40" width="230" height="34" rx="12" fill="#83d2e3" opacity="0.3"/>
+  <text x="346" y="62" font-size="14" font-weight="800" fill="#0b5e6e">zones</text>
+  <text x="346" y="96" font-size="12.5" fill="#1f2430">id · uuid (PK)</text>
+  <text x="346" y="118" font-size="12.5" fill="#1f2430">board_id → boards.id</text>
+  <text x="346" y="140" font-size="12.5" fill="#1f2430">label · accent · kind</text>
+  <text x="346" y="162" font-size="12.5" fill="#1f2430">x · y · w · h · position</text>
+  <text x="346" y="184" font-size="12.5" fill="#1f2430">rule · jsonb</text>
+  <text x="346" y="206" font-size="12.5" fill="#5b6473">oblasti na plátně</text>
+
+  <!-- tasks -->
+  <rect x="630" y="40" width="218" height="300" rx="12" fill="#fff" stroke="#e3e5ea" filter="url(#s3)"/>
+  <rect x="630" y="40" width="218" height="34" rx="12" fill="#fcef9c" opacity="0.7"/>
+  <text x="646" y="62" font-size="14" font-weight="800" fill="#7a6a00">tasks</text>
+  <text x="646" y="96" font-size="12.5" fill="#1f2430">id · uuid (PK)</text>
+  <text x="646" y="118" font-size="12.5" fill="#1f2430">board_id → boards.id</text>
+  <text x="646" y="140" font-size="12.5" fill="#1f2430">zone_id → zones.id</text>
+  <text x="646" y="162" font-size="12.5" fill="#1f2430">title · status · color</text>
+  <text x="646" y="184" font-size="12.5" fill="#1f2430">canvas_x · canvas_y</text>
+  <text x="646" y="206" font-size="12.5" fill="#1f2430">assignee · source</text>
+  <text x="646" y="228" font-size="12.5" fill="#1f2430">notes_md · text (MD)</text>
+  <text x="646" y="250" font-size="12.5" fill="#1f2430">home · jsonb</text>
+  <text x="646" y="272" font-size="12.5" fill="#1f2430">result_note · tags</text>
+  <text x="646" y="300" font-size="12.5" fill="#5b6473">lísteček (post-it)</text>
+
+  <!-- relations -->
+  <line x1="252" y1="130" x2="330" y2="130" stroke="#5b6473" stroke-width="1.6"/>
+  <text x="268" y="122" font-size="12" font-weight="700" fill="#5b6473">1 — ∞</text>
+  <line x1="560" y1="120" x2="630" y2="120" stroke="#5b6473" stroke-width="1.6"/>
+  <text x="572" y="112" font-size="12" font-weight="700" fill="#5b6473">1 — ∞</text>
+  <path d="M252 150 C 300 250, 560 300, 630 250" fill="none" stroke="#5b6473" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="360" y="300" font-size="12" font-weight="700" fill="#5b6473">boards 1 — ∞ tasks</text>
+</svg>
